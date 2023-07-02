@@ -5,7 +5,7 @@
 git clone https://github.com/ultralytics/yolov5  # clone
 ```
 
-* 屏幕抓取可以使用mss开源库，准备以后该
+* 屏幕抓取可以使用mss开源库，准备以后改
 
 * vscode运行时默认路径为工作区路径，需要cd到aim-assist所在目录
 
