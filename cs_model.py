@@ -8,13 +8,14 @@ from utils.torch_utils import select_device
 def load_model(device = '', 
                imgsz=(640, 640), 
                weights = '.\models\yolov5s.pt', 
-               half = False
+               half = False,
+               dnn = False
 ):
     # device = 'cuda' if torch.cuda.is_available() else 'cpu'
     # half = device != 'cpu'
 
     device = select_device(device)
-    model = DetectMultiBackend(weights, device=device, fp16=half)
+    model = DetectMultiBackend(weights, device=device, dnn=dnn, fp16=half)
     stride, names, pt = model.stride, model.names, model.pt
     imgsz = check_img_size(imgsz, s=stride)
 
